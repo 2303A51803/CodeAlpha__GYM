@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="gym.css">
+</head>
+<body>
+  <h1>Fitness Tracker</h1>
+
+  <div class="top-row">
+    <div class="muted">Date: <span id="todayLabel"></span></div>
+    <div>
+      <button id="clearBtn" class="secondary">Clear Today's Data</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="total-section">
+      <div>
+        <div class="muted small">Total Calories Today</div>
+        <div class="green" id="totalCalories">0 kcal</div>
+      </div>
+      <div class="target">
+        <div class="muted small">Daily Target (kcal)</div>
+        <input id="targetInput" type="number" value="500" />
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="muted small">Progress</div>
+      <div class="progress"><i id="progressBar"></i></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Add Activity</h3>
+    <label>Workout type</label>
+    <input id="typeInput" placeholder="Running, Yoga, etc" />
+
+    <div class="row">
+      <div>
+        <label>Duration (minutes)</label>
+        <input id="durationInput" type="number" placeholder="30" />
+      </div>
+      <div>
+        <label>Calories</label>
+        <input id="caloriesInput" type="number" placeholder="200" />
+      </div>
+    </div>
+
+    <button id="saveBtn">Save Activity</button>
+  </div>
+
+  <div class="card">
+    <h3>Today's Activities</h3>
+    <ul class="activities" id="activitiesList"></ul>
+  </div>
+
+  <script src="gym.js"></script>
+</body>
+</html>
